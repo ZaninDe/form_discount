@@ -67,7 +67,7 @@ export function ImaginariumForm({ tab1, tab2 }: FormProps) {
   };
 
   return (
-    <main className="h-screen w-screen flex flex-col md:flex-row">
+    <main className="h-screen w-screen flex flex-col md:flex-row overflow-hidden">
       <div className="md:h-screen h-1/4 w-screen md:w-1/2 bg-no-repeat bg-center bg-cover bg-hero-imaginarium-mobile sm:bg-hero-imaginarium-desk">
       </div>
       <div className="md:h-screen h-3/4 w-screen md:w-1/2 bg-zinc-50 flex items-center justify-center">
@@ -75,7 +75,7 @@ export function ImaginariumForm({ tab1, tab2 }: FormProps) {
           !isSuccess ?
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-2 w-full max-w-xs"
+              className="flex flex-col gap-2 w-full max-w-xs mt-[-10%]"
             >
               <div className="flex flex-col gap-1 min-h-[94px]">
                 <label htmlFor="" className="text-#121214">Nome Completo</label>
@@ -112,7 +112,7 @@ export function ImaginariumForm({ tab1, tab2 }: FormProps) {
                 />
                 <p className="text-red-700 text-xs relative">{errors.address?.message}</p>
               </div>
-              <button type="submit" className="bg-gradient-to-b from-[#121214] to-[#000] rounded text-white font-bold h-10">
+              <button type="submit" className="bg-gradient-to-b from-[#121214] to-[#000] rounded text-white font-bold h-10 outline-zinc-400">
                 {
                   isSubmiting ?
                     <TailSpin
@@ -138,7 +138,7 @@ export function ImaginariumForm({ tab1, tab2 }: FormProps) {
               <div className="flex flex-col items-center justify-center">
                 <span className="block mb-8">Conheça a IMAGINARUIM</span>
                 <Link href="https://www.instagram.com/nanicabrasil/?hl=pt" className="text-center">
-                  <span className="py-4 px-10 bg-gradient-to-b from-[#121214] to-[#000] rounded text-white font-bold h-10">IR PARA LOJA</span>
+                  <span className="py-4 px-10 bg-gradient-to-b from-[#121214] to-[#000] rounded text-white font-bold h-10 outline-zinc-400">IR PARA LOJA</span>
                 </Link>
               </div>
             </div>

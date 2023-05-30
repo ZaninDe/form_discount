@@ -67,7 +67,7 @@ export function NanicaForm({ tab1, tab2 }: FormProps) {
   };
 
   return (
-    <main className="h-screen w-screen flex flex-col md:flex-row">
+    <main className="h-screen w-screen flex flex-col md:flex-row overflow-hidden">
       <div className="md:h-screen h-1/4 w-screen md:w-1/2 bg-[#823811] flex items-center justify-center">
         <div className="md:w-[80%] md:h-[40%] w-[90%] h-[60%] bg-no-repeat bg-center bg-contain bg-hero-nanica"></div>
       </div>
@@ -76,7 +76,7 @@ export function NanicaForm({ tab1, tab2 }: FormProps) {
           !isSuccess ?
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-2 w-full max-w-xs"
+              className="flex flex-col gap-2 w-full max-w-xs mt-[-10%]"
             >
               <div className="flex flex-col gap-1 min-h-[94px]">
                 <label htmlFor="" className="text-#121214">Nome Completo</label>
@@ -113,7 +113,7 @@ export function NanicaForm({ tab1, tab2 }: FormProps) {
                 />
                 <p className="text-red-700 text-xs relative">{errors.address?.message}</p>
               </div>
-              <button type="submit" className="bg-gradient-to-b from-[#ffbf00] to-[#f2a50c] rounded text-white font-bold h-10">
+              <button type="submit" className="bg-gradient-to-b from-[#ffbf00] to-[#f2a50c] rounded text-white font-bold h-10 outline-zinc-400">
                 {
                   isSubmiting ?
                     <TailSpin
@@ -139,7 +139,7 @@ export function NanicaForm({ tab1, tab2 }: FormProps) {
               <div className="flex flex-col items-center justify-center">
                 <span className="block mb-8">Conheça a IMAGINARUIM</span>
                 <Link href="https://www.instagram.com/sigaimaginarium/" className="text-center">
-                  <span className="py-4 px-10 bg-gradient-to-b from-[#ffbf00] to-[#f2a50c] rounded text-white font-bold h-10">IR PARA LOJA</span>
+                  <span className="py-4 px-10 bg-gradient-to-b from-[#ffbf00] to-[#f2a50c] rounded text-white font-bold h-10 outline-zinc-400">IR PARA LOJA</span>
                 </Link>
               </div>
             </div>
