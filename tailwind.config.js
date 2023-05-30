@@ -7,11 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        yellow: {
+          'custom-yellow': '#823811'
+        }
       },
+      backgroundImage: {
+        'hero-pattern': "url('https://smzto.com.br/wp-content/uploads/2022/01/nanica.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
+      fontFamily: {
+        sans: 'var(--font-roboto)'
+      }
     },
   },
   plugins: [],
