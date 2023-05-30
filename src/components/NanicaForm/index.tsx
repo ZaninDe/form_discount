@@ -67,7 +67,7 @@ export function NanicaForm({ tab1, tab2 }: FormProps) {
   };
 
   return (
-    <main className="h-screen w-screen flex flex-col md:flex-row overflow-hidden">
+    <main className="h-screen w-screen flex flex-col md:flex-row">
       <div className="md:h-screen h-1/4 w-screen md:w-1/2 bg-[#823811] flex items-center justify-center">
         <div className="md:w-[80%] md:h-[40%] w-[90%] h-[60%] bg-no-repeat bg-center bg-contain bg-hero-nanica"></div>
       </div>
@@ -76,7 +76,7 @@ export function NanicaForm({ tab1, tab2 }: FormProps) {
           !isSuccess ?
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-2 w-full max-w-xs mt-[-10%]"
+              className="flex flex-col gap-2 w-full max-w-xs"
             >
               <div className="flex flex-col gap-1 min-h-[94px]">
                 <label htmlFor="" className="text-#121214">Nome Completo</label>

@@ -67,7 +67,7 @@ export function ImaginariumForm({ tab1, tab2 }: FormProps) {
   };
 
   return (
-    <main className="h-screen w-screen flex flex-col md:flex-row overflow-hidden">
+    <main className="h-screen w-screen flex flex-col md:flex-row">
       <div className="md:h-screen h-1/4 w-screen md:w-1/2 bg-no-repeat bg-center bg-cover bg-hero-imaginarium-mobile sm:bg-hero-imaginarium-desk">
       </div>
       <div className="md:h-screen h-3/4 w-screen md:w-1/2 bg-zinc-50 flex items-center justify-center">
@@ -75,7 +75,7 @@ export function ImaginariumForm({ tab1, tab2 }: FormProps) {
           !isSuccess ?
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-2 w-full max-w-xs mt-[-10%]"
+              className="flex flex-col gap-2 w-full max-w-xs"
             >
               <div className="flex flex-col gap-1 min-h-[94px]">
                 <label htmlFor="" className="text-#121214">Nome Completo</label>
