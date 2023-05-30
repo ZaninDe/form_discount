@@ -13,7 +13,9 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'hero-pattern': "url('https://smzto.com.br/wp-content/uploads/2022/01/nanica.png')",
+        'hero-nanica': "url('https://smzto.com.br/wp-content/uploads/2022/01/nanica.png')",
+        'hero-imaginarium-mobile': "url('/img/hero_imaginarium_mobile.jpg')",
+        'hero-imaginarium-desk': "url('/img/hero_imaginarium_desk.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       },
       fontFamily: {
