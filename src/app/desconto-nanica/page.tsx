@@ -10,11 +10,11 @@ const NANICA_TAB1= process.env.NEXT_PUBLIC_NANICA_TAB1
 const NANICA_TAB2= process.env.NEXT_PUBLIC_NANICA_TAB2
 
  
-import { Form } from "../../components/Form";
+import { NanicaForm } from "../../components/NanicaForm";
 export default function Nanica() {
   return (
     <div>
-      <Form 
+      <NanicaForm 
       //@ts-ignore
         tab1={NANICA_TAB1}
         //@ts-ignore

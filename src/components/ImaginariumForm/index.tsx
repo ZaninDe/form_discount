@@ -25,7 +25,7 @@ const schema = yup.object({
   address: yup.string().required('campo obrigatório')
 });
 
-export function Form({ tab1, tab2 }: FormProps) {
+export function ImaginariumForm({ tab1, tab2 }: FormProps) {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<Inputs>({
     resolver: yupResolver(schema)
   });
@@ -68,8 +68,7 @@ export function Form({ tab1, tab2 }: FormProps) {
 
   return (
     <main className="h-screen w-screen flex flex-col md:flex-row">
-      <div className="md:h-screen h-1/4 w-screen md:w-1/2 bg-[#823811] flex items-center justify-center">
-        <div className="md:w-[80%] md:h-[40%] w-[90%] h-[60%] bg-no-repeat bg-center bg-contain bg-hero-pattern"></div>
+      <div className="md:h-screen h-1/4 w-screen md:w-1/2 bg-no-repeat bg-center bg-cover bg-hero-imaginarium-mobile sm:bg-hero-imaginarium-desk">
       </div>
       <div className="md:h-screen h-3/4 w-screen md:w-1/2 bg-zinc-50 flex items-center justify-center">
         {
@@ -79,10 +78,10 @@ export function Form({ tab1, tab2 }: FormProps) {
               className="flex flex-col gap-2 w-full max-w-xs"
             >
               <div className="flex flex-col gap-1 min-h-[94px]">
-                <label htmlFor="" className="text-#121214">Nome</label>
+                <label htmlFor="" className="text-#121214">Nome Completo</label>
                 <input
                   {...register("name")}
-                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2"
+                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2 outline-zinc-400"
                 />
                 <p className="text-red-700 text-xs relative">{errors.name?.message}</p>
               </div>
@@ -91,7 +90,7 @@ export function Form({ tab1, tab2 }: FormProps) {
                 <label htmlFor="" className="text-#121214">E-mail</label>
                 <input
                   {...register("email")}
-                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2"
+                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2 outline-zinc-400"
                 />
                 <p className="text-red-700 text-xs relative">{errors.email?.message}</p>
               </div>
@@ -100,7 +99,7 @@ export function Form({ tab1, tab2 }: FormProps) {
                 <label htmlFor="" className="text-#121214">CPF</label>
                 <input
                   {...register("cpf")}
-                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2"
+                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2 outline-zinc-400"
                 />
                 <p className="text-red-700 text-xs relative">{errors.cpf?.message}</p>
               </div>
@@ -109,11 +108,11 @@ export function Form({ tab1, tab2 }: FormProps) {
                 <label htmlFor="" className="text-#121214">Endereço</label>
                 <input
                   {...register("address")}
-                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2"
+                  className="border border-zinc-200 shadow-sm rounded h-10 text-zinc-900 p-2 outline-zinc-400"
                 />
                 <p className="text-red-700 text-xs relative">{errors.address?.message}</p>
               </div>
-              <button type="submit" className="bg-gradient-to-b from-[#ffbf00] to-[#f2a50c] rounded text-white font-bold h-10">
+              <button type="submit" className="bg-gradient-to-b from-[#121214] to-[#000] rounded text-white font-bold h-10">
                 {
                   isSubmiting ?
                     <TailSpin
@@ -135,11 +134,11 @@ export function Form({ tab1, tab2 }: FormProps) {
             :
             <div className="flex flex-col items-center justify-center gap-8">
               <h1 className="text-zinc-950 text-5xl text-center">Enviado com Sucesso!</h1>
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" fill="#f2a50c" height="64" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" fill="#f1be00" height="64" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"/></svg>
               <div className="flex flex-col items-center justify-center">
-                <span className="block mb-4">Conheça a IMAGINARUIM</span>
+                <span className="block mb-8">Conheça a IMAGINARUIM</span>
                 <Link href="https://www.instagram.com/nanicabrasil/?hl=pt" className="text-center">
-                  <span className="p-2 bg-gradient-to-b from-[#ffbf00] to-[#f2a50c] rounded text-white font-bold h-10">IR PARA LOJA</span>
+                  <span className="py-4 px-10 bg-gradient-to-b from-[#121214] to-[#000] rounded text-white font-bold h-10">IR PARA LOJA</span>
                 </Link>
               </div>
             </div>
