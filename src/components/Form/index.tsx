@@ -76,7 +76,7 @@ export function Form({ tab1, tab2 }: FormProps) {
           !isSuccess ?
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 w-full max-w-xs"
+              className="flex flex-col gap-2 w-full max-w-xs"
             >
               <div className="flex flex-col gap-1 min-h-[94px]">
                 <label htmlFor="" className="text-#121214">Nome</label>
