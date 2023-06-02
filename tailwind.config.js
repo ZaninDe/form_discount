@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         'hero-nanica': "url('https://smzto.com.br/wp-content/uploads/2022/01/nanica.png')",
         'hero-imaginarium-mobile': "url('/img/hero_imaginarium_mobile.jpg')",
+        'hbackground_success': "url('/img/background_success.jpg')",
         'hero-imaginarium-desk': "url('/img/hero_imaginarium_desk.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
         'logo-1': "url('/img/nanica_logo.svg')",

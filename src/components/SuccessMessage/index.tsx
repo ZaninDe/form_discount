@@ -7,7 +7,7 @@ import Head from "next/head";
 export function SuccessMessage() {
   return (
     <>
-      <main className="py-8 px-4 md:px-36 h-screen w-screen bg-[#F3CC12] md:block flex">
+      <main className="py-8 px-4 md:px-36 h-screen w-screen bg-hbackground_success bg-cover md:block flex">
         <Image src="img/logo_success.svg" alt="logo" width={225} height={900} className="mb-16 hidden md:block" />
         <div className="flex w-[100%] flex-col justify-center items-center gap-8">
           <Image src="img/check.svg" alt="logo" width={158} height={135} />
