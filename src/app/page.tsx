@@ -105,11 +105,13 @@ export default function NanicaForm() {
 
                   <div className="flex flex-col gap-1 min-h-[108px]">
                     <label htmlFor="" className="text-[#3E2412] font-bold mb-2">Data de nascimento</label>
-                    <input
-                      type="date"
-                      placeholder=""
+                    <ReactInputMask
+                      mask={"99/99/9999"}
+                      maskPlaceholder=''
+                      alwaysShowMask={false}
+                      type="text"
                       {...register("birthday")}
-                      className="focus:text-base text-[0px] border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17]"
+                      className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17]"
                     />
                     <p className="text-red-700 text-xs relative">{errors.birthday?.message}</p>
                   </div>
