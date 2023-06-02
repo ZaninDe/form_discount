@@ -17,9 +17,12 @@ module.exports = {
         'hero-imaginarium-mobile': "url('/img/hero_imaginarium_mobile.jpg')",
         'hero-imaginarium-desk': "url('/img/hero_imaginarium_desk.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
+        'logo-1': "url('/img/nanica_logo.svg')",
       },
       fontFamily: {
-        sans: 'var(--font-roboto)'
+        sans: 'var(--font-roboto)',
+        dk: ['var(--font-dk)'],
+        gillSans: ['var(--font-gill)']
       }
     },
   },
