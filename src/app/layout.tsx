@@ -14,12 +14,19 @@ const gillSans = localFont({
   variable: '--font-gill',
 })
 
+export const metadata = {
+  title: 'Desconto | Nanica',
+  description:
+    'Formulário de desconto Nanica',
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
+    
     <>
       <html lang="en">
         <body className={`${dk.variable} ${gillSans.variable}  font-sans`}>{children}</body>

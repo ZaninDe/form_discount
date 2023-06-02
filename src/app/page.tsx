@@ -18,9 +18,6 @@ type Inputs = {
   permitionData: boolean
 };
 
-
-
-
 const schema = yup.object({
   name: yup.string().required('campo obrigatório').nullable(),
   email: yup.string().email('digite um e-mail válido').required('campo obrigatório'),
