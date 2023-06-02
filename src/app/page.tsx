@@ -23,7 +23,7 @@ const schema = yup.object({
   email: yup.string().email('digite um e-mail válido').required('campo obrigatório'),
   telefone: yup.string().required('campo obrigatório'),
   birthday: yup.string().required('campo obrigatório'),
-  permitionData: yup.bool().required()
+  permitionData: yup.bool().oneOf([true],'campo obrigatório')
 });
 
 const path = process.env.NEXT_PUBLIC_NANICA_TAB_PATH
@@ -56,10 +56,6 @@ export default function NanicaForm() {
       reset();
       setIsSubmiting(false)
     }
-  };
-
-  const handleChange = (event: any) => {
-    setValue(event.target.value);
   };
 
   return (
@@ -123,7 +119,7 @@ export default function NanicaForm() {
                     />
                     <label htmlFor="" className="text-[#3E2412] font-bold">Aceita receber comunicação do Nanica?</label>
                   </div>
-                  <p className="text-red-700 text-xs relative">{errors.birthday?.message}</p>
+                  <p className="text-red-700 text-xs relative">{errors.permitionData?.message}</p>
                   <p className="w-[100%] font-semibold text-sm text-[#3E2412] text-justify">
                     Solicitamos permissão para usar seus dados pessoais internamente, visando melhorar nossos serviços.
                     Garantimos a confidencialidade e proteção adequada dos seus dados. Por favor, confirme se concorda com o
