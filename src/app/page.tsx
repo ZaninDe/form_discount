@@ -61,20 +61,21 @@ export default function NanicaForm() {
   };
 
   return (
-    <main className="h-screen w-screen flex flex-col-reverse md:flex-row font-gillSans bg-[#FFF9E7]">
+    <main className="h-screen w-screen p-4 md:p-6 flex flex-col-reverse overflow-hidden justify-between items-center md:flex-row font-gillSans bg-[#FFF9E7]">
       {
         !isSuccess ?
           <>
-            <div className="w-screen md:w-3/4  flex items-center md:justify-start justify-center p-4 md:p-28">
+            <div className="w-screen md:w-3/4  flex items-center md:juststartify- justify-center">
+            {/* <Image src="img/balloon.svg" alt="logo" width={303} height={330} className="absolute top-[140px] right-0 md:hidden overflow-hidden" /> */}
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-2 w-[100%] max-w-[438px]"
+                className="flex flex-col gap-2 w-[90%] md:w-[100%] max-w-[440px]"
               >
                 <div className="flex flex-col gap-1 min-h-[108px]">
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">Nome Completo</label>
                   <input
                     {...register("name")}
-                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17]"
+                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.name?.message}</p>
                 </div>
@@ -83,7 +84,7 @@ export default function NanicaForm() {
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">E-mail</label>
                   <input
                     {...register("email")}
-                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17]"
+                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.email?.message}</p>
                 </div>
@@ -96,7 +97,7 @@ export default function NanicaForm() {
                     alwaysShowMask={false}
                     type="text"
                     {...register("telefone")}
-                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17]"
+                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.telefone?.message}</p>
                 </div>
@@ -109,7 +110,7 @@ export default function NanicaForm() {
                     alwaysShowMask={false}
                     type="text"
                     {...register("birthday")}
-                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17]"
+                    className="border shadow-sm h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.birthday?.message}</p>
                 </div>
@@ -119,11 +120,10 @@ export default function NanicaForm() {
                     {...register("newsLetter")}
                     className="border shadow-sm h-4 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] accent-[#733B17] cursor-pointer w-4 bg-[#FFF9E7]"
                   />
-                  <label htmlFor="" className="text-[#3E2412] font-bold">Aceita receber comunicação do Nanica?</label>
+                  <label htmlFor="" className="text-[#3E2412] font-bold mt-1">Aceita receber comunicação do Nanica?</label>
                 </div>
-                <p className="text-red-700 text-xs relative">{errors.newsLetter?.message}</p>
-                <div className="min-h-[120px]">
-                <div className="flex items-start gap-4 mt-4">
+                <div className="md:min-h-[100px] min-h-[90px]">
+                <div className="flex items-start gap-4 md:mt-4 mt-2">
                 <input
                     type="checkbox"
                     {...register("permitionData")}
@@ -156,9 +156,9 @@ export default function NanicaForm() {
               </form>
             </div>
 
-            <div className="md:w-2/5 w-screen flex flex-col items-center md:justify-between justify-center md:max-h-[1120px] md:h-screen">
-              <Image src="img/nanica_logo.svg" alt="logo" width={297} height={206} className="min-w-[297px] min-h-[209px]" />
-              <Image src="img/balloon.svg" alt="logo" width={471} height={528} className="md:block hidden" />
+            <div className="md:w-2/5 w-screen flex flex-col items-center md:justify-between justify-center h-screen py-4 2xl:py-[10%] md:h-screen">
+              <Image src="img/nanica_logo.svg" alt="logo" width={185} height={96} className="" />
+              <Image src="img/balloon.svg" alt="logo" width={303} height={330} className="md:block hidden" />
             </div>
           </>
           :
