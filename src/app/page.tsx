@@ -61,7 +61,7 @@ export default function NanicaForm() {
   };
 
   return (
-    <main className="h-screen w-screen max-w-full p-4 md:p-6 flex overflow-y-scroll overflow-x-hidden flex-col-reverse justify-between items-center md:flex-row font-gillSans bg-[#FFF9E7]">
+    <main className="h-screen w-screen max-w-full md:py-6 flex overflow-y-scroll xl:overflow-y-hidden overflow-x-hidden flex-col-reverse justify-between items-center md:flex-row font-gillSans bg-[#FFF9E7]">
       {
         !isSuccess ?
           <>
@@ -69,7 +69,7 @@ export default function NanicaForm() {
             {/* <Image src="img/balloon.svg" alt="logo" width={303} height={330} className="absolute top-[140px] right-0 md:hidden overflow-hidden" /> */}
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-2 w-[90%] md:w-[100%] max-w-[440px]"
+                className="flex flex-col gap-2 w-[90%] md:w-[100%] max-w-[440px] py-4"
               >
                 <div className="flex flex-col gap-1 min-h-[80px] md:min-h-[108px]">
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">Nome Completo</label>
@@ -144,7 +144,7 @@ export default function NanicaForm() {
                         color="#fff"
                         ariaLabel="tail-spin-loading"
                         radius="1"
-                        wrapperStyle={{ marginLeft: '200px' }}
+                        wrapperStyle={{ marginLeft: '45%' }}
                         wrapperClass=""
                         visible={true}
                       />
@@ -156,7 +156,7 @@ export default function NanicaForm() {
               </form>
             </div>
 
-            <div className="md:w-2/5 w-screen flex flex-col items-center md:justify-between justify-center h-screen py-4 2xl:py-[5%] md:h-screen">
+            <div className="md:w-2/5 w-screen flex flex-col items-center md:justify-between justify-center h-[] py-4 2xl:py-[5%] md:h-screen">
               <Image src="img/nanica_logo.svg" alt="logo" width={185} height={96} className="" />
               <Image src="img/balloon.svg" alt="logo" width={303} height={330} className="md:block hidden" />
             </div>
