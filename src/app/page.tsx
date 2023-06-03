@@ -61,12 +61,12 @@ export default function NanicaForm() {
   };
 
   return (
-    <main className="h-screen w-screen max-w-full md:py-6 flex overflow-y-scroll xl:overflow-y-hidden overflow-x-hidden flex-col-reverse justify-between items-center md:flex-row font-gillSans bg-[#FFF9E7]">
+    <main className="h-screen w-screen max-w-full md:py-6 flex overflow-y-scroll xl:overflow-y-hidden overflow-x-hidden flex-col-reverse justify-around items-center md:flex-row font-gillSans bg-[#FFF9E7]">
       {
         !isSuccess ?
           <>
-            <div className="w-screen md:w-3/4  flex items-center md:juststartify- justify-center">
-            {/* <Image src="img/balloon.svg" alt="logo" width={303} height={330} className="absolute top-[140px] right-0 md:hidden overflow-hidden" /> */}
+            <div className="w-screen md:w-3/4 max-w-full pt-12  flex items-center justify-center overflow-x-hidden relative">
+            <Image src="img/balloon.svg" alt="logo" width={303} height={330} className="absolute top-[-20px] left-[45%] overflow-x-hidden md:hidden" />
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-2 w-[90%] md:w-[100%] max-w-[440px] py-4"
