@@ -71,25 +71,25 @@ export default function NanicaForm() {
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-2 w-[90%] md:w-[100%] max-w-[440px] py-4"
               >
-                <div className="flex flex-col gap-1 min-h-[80px] md:min-h-[108px]">
+                <div className="flex flex-col gap-1 min-h-[84px] md:min-h-[108px]">
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">Nome Completo</label>
                   <input
                     {...register("name")}
-                    className="border shadow-sm h-10 md:h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
+                    className="border shadow-sm h-10 md:h-12 text-[#3E2412] p-2 pb-1 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.name?.message}</p>
                 </div>
 
-                <div className="flex flex-col gap-1 min-h-[80px] md:min-h-[108px]">
+                <div className="flex flex-col gap-1 min-h-[84px] md:min-h-[108px]">
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">E-mail</label>
                   <input
                     {...register("email")}
-                    className="border shadow-sm h-10 md:h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
+                    className="border shadow-sm h-10 md:h-12 text-[#3E2412] p-2 pb-1 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.email?.message}</p>
                 </div>
 
-                <div className="flex flex-col gap-1 min-h-[80px] md:min-h-[108px]">
+                <div className="flex flex-col gap-1 min-h-[84px] md:min-h-[108px]">
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">Telefone</label>
                   <ReactInputMask
                     mask={"(99) 99999-9999"}
@@ -97,12 +97,12 @@ export default function NanicaForm() {
                     alwaysShowMask={false}
                     type="text"
                     {...register("telefone")}
-                    className="border shadow-sm h-10 md:h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
+                    className="border shadow-sm h-10 md:h-12 text-[#3E2412] p-2 pb-1 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.telefone?.message}</p>
                 </div>
 
-                <div className="flex flex-col gap-1 min-h-[80px] md:min-h-[108px]">
+                <div className="flex flex-col gap-1 min-h-[84px] md:min-h-[108px]">
                   <label htmlFor="" className="text-[#3E2412] font-bold mb-2">Data de nascimento</label>
                   <ReactInputMask
                     mask={"99/99/9999"}
@@ -110,7 +110,7 @@ export default function NanicaForm() {
                     alwaysShowMask={false}
                     type="text"
                     {...register("birthday")}
-                    className="border shadow-sm h-10 md:h-12 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] z-10"
+                    className="border shadow-sm h-10 md:h-12 text-[#3E2412] p-2 pb-1 outline-zinc-400 border-[#733B17] z-10"
                   />
                   <p className="text-red-700 text-xs relative">{errors.birthday?.message}</p>
                 </div>
@@ -118,24 +118,24 @@ export default function NanicaForm() {
                   <input
                     type="checkbox"
                     {...register("newsLetter")}
-                    className="border shadow-sm h-4 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] accent-[#733B17] cursor-pointer w-4 bg-[#FFF9E7]"
+                    className="border shadow-sm h-4 text-[#3E2412] p-2 pb-1 outline-zinc-400 border-[#733B17] accent-[#733B17] cursor-pointer w-4 bg-[#FFF9E7]"
                   />
-                  <label htmlFor="" className="text-[#3E2412] font-bold mt-1">Aceita receber comunicação do Nanica?</label>
+                  <label htmlFor="" className="text-[#3E2412] text-sm font-semibold mt-1">Aceita receber comunicação do Nanica?</label>
                 </div>
-                <div className="md:min-h-[100px] min-h-[90px]">
+                <div className="md:min-h-[100px] min-h-[94px]">
                 <div className="flex items-start gap-4 md:mt-4 mt-2">
                 <input
                     type="checkbox"
                     {...register("permitionData")}
-                    className="border shadow-sm h-4 text-zinc-900 p-2 outline-zinc-400 border-[#733B17] accent-[#733B17] cursor-pointer w-4 bg-[#FFF9E7]"
+                    className="border shadow-sm h-4 text-[#3E2412] p-2 pb-1 outline-zinc-400 border-[#733B17] accent-[#733B17] cursor-pointer w-4 bg-[#FFF9E7]"
                   />
                   <p className="w-[100%] font-semibold text-sm text-[#3E2412] text-justify">
-                  Solicitamos permissão para usar seus dados pessoais internamente, visando melhorar nossos serviços. Garantimos a confidencialidade e proteção adequada dos seus dados. Por favor, confirme se concorda com o uso.
+                  Solicitamos permissão para usar seus dados pessoais internamente, visando melhorar nossos serviços. Garantimos a confidencialidade e proteção adequada dos seus dados. Por favor, confirme se concorda com o uso *.
                   </p>
                 </div>
                 <p className="text-red-700 text-xs relative ml-8">{errors.permitionData?.message}</p>
                 </div>
-                <button type="submit" className="bg-[#733B17] text-white font-bold h-10 md:h-12 outline-zinc-400 mt-4">
+                <button type="submit" className="bg-[#733B17] text-white font-bold h-10 md:h-12 outline-zinc-400 mt-2">
                   {
                     isSubmiting ?
                       <TailSpin
@@ -164,7 +164,6 @@ export default function NanicaForm() {
           :
           <SuccessMessage />
       }
-
     </main>
   )
 }
